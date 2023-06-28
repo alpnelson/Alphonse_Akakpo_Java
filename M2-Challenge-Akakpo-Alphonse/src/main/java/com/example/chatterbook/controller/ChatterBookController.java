@@ -18,7 +18,7 @@ public class ChatterBookController {
 
     private List<User> userList;
 
-    public void ChatterBookController() {
+    public  ChatterBookController() {
         User luis = new User("Luis");
         User sue = new User("Sue");
         User timothy = new User("Timothy");
