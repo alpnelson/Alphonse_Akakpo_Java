@@ -8,4 +8,5 @@ import java.util.Optional;
 
 public interface CustomerRepository  extends JpaRepository<Customer, Integer> {
     List<Customer> findByState(String state);
+
 }

@@ -20,7 +20,7 @@ import org.springframework.http.MediaType;
 
 
 @WebMvcTest(CustomerController.class)
-public class CustomerControllerTests {
+public class CustomerControllerTest {
 
     @MockBean
 
