@@ -1,4 +1,4 @@
-package com.company.authorizationservice;
+package com.company.AuthoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,12 +11,12 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 
 @Configuration
 @EnableAuthorizationServer
-public class OAuthConfig  extends AuthorizationServerConfigurerAdapter {
+public class OauthConfig  extends AuthorizationServerConfigurerAdapter {
 
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    public OAuthConfig(AuthenticationManager authenticationManager) {
+    public OauthConfig(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
 
