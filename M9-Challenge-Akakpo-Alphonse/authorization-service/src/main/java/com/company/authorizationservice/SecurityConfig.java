@@ -1,4 +1,4 @@
-package com.company.AuthoService;
+package com.company.authorizationservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,8 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         authBuilder.jdbcAuthentication()
                 .dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, enabled from users where username = ?")
-                .authoritiesByUsernameQuery("select username, authority from authorities where username = ?")
+                .usersByUsernameQuery(
+                        "select username, password, enabled from users where username = ?")
+                .authoritiesByUsernameQuery(
+                        "select username, authority from authorities where username = ?")
                 .passwordEncoder(encoder);
 
     }

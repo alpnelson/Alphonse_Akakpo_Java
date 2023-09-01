@@ -26,7 +26,7 @@ public class RecordStoreControllerTest {
     private MockMvc mockMvc;
 
     // ObjectMapper used to convert Java objects to JSON and vice versa
-    private ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper = new ObjectMapper();
 
     // A list of records for testing purposes
     private List<Record> recordList;

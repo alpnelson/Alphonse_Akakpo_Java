@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 public class RecordStoreController {
 
-    private List<Record> recordList;
+    private final List<Record> recordList;
 
     private static int idCounter = 1;
 
@@ -42,8 +41,6 @@ public class RecordStoreController {
 
         return recordList;
     }
-
-
 
     @RequestMapping(value = "/records/{id}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
